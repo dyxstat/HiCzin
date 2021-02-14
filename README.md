@@ -14,7 +14,7 @@ HiCzin is available through the Rscript HiCzin.R.
 #### Contig Assembly
 For the shotgun library, de novo metagenome assembly was produced by MEGAHIT with parameters ‘-min-contig-len 300 -k-min 21 -k-max 141 -k-step 12 -merge-level 20,0.95’ and contigs shorter than 1 kb were discarded.
 #### Calculating the coverage of assembled contigs
-Firstly, BBmap from the BBTools suite was applied to map the shotgun reads to the assembled contigs with parameters ‘bamscript=bs.sh; sh bs.sh’. The coverage of contigs was computed using MetaBAT v2.12.5 script: ‘jgi summarize bam contig depths’.
+Firstly, BBmap from the BBTools suite was applied to map the shotgun reads to the assembled contigs with parameters ‘bamscript=bs.sh; sh bs.sh’. The coverage of contigs was computed using MetaBAT v2.12.1 script: ‘jgi summarize bam contig depths’.
 #### Alignment of Hi-C paired-end reads
 Hi-C paired-end reads were mapped to assembled contigs using BWA-MEM with parameters ‘-5SP’. Then, samtools with parameters ‘view -F 0x904’ were applied on the resulting BAM files to remove unmapped reads (0x4) and supplementary (0x800) and secondary (0x100) alignments. Alignments with low quality ( <30 nucleotide match length or mapping score <30) were also filtered out.
 #### Generating sample data of the intra-species contacts by TAXAassign
