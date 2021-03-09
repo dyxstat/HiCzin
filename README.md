@@ -10,6 +10,10 @@ HiCzin is a normalization method designed for metagenomic Hi-C data. HiCzin is b
 ## Usage 
 HiCzin is available through the Rscript HiCzin.R. 
 
+### Install the R package 'glmmTMB'
+We suggest installing the source version of 'glmmTMB' by **install.packages("glmmTMB", type="source")** in case of one potential error derived from the dependency version (https://github.com/glmmTMB/glmmTMB/issues/615):
+'Error in .Call("FreeADFunObject", ptr, PACKAGE = DLL) : "FreeADFunObject" not available for .Call() for package "glmmTMB"'.
+
 ### Typical Workflow
 #### Contig Assembly
 For the shotgun library, de novo metagenome assembly was produced by MEGAHIT with parameters ‘-min-contig-len 300 -k-min 21 -k-max 141 -k-step 12 -merge-level 20,0.95’ and contigs shorter than 1 kb were discarded.
