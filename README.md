@@ -1,8 +1,8 @@
 # HiCzin: Normalizing metagenomic Hi-C data and detecting spurious contacts using zero-inflated negative binomial regression
 
-```
-Please refer to the folder 
-```
+
+Please refer to the folder RECOMB 
+
 
 
 ## HiCzin: Normalizing metagenomic Hi-C data and detecting spurious contacts
