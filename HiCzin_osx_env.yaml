@@ -1,4 +1,4 @@
-name: HiCBin_env
+name: HiCzin_env
 channels:
   - conda-forge
   - bioconda
