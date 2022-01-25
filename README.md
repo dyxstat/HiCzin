@@ -1,7 +1,7 @@
 # HiCzin: Normalizing metagenomic Hi-C data and detecting spurious contacts using zero-inflated negative binomial regression
 
 
-Please refer to the folder RECOMB 
+Please refer to the folder 'RECOMB paper related materials' for supplementary materials, related datasets and codes in our HiCzin RECOMB paper (Yuxuan Du, Sarah M. Laperriere, Jed Fuhrman, and Fengzhu Sun.Journal of Computational Biology.ahead of printhttp://doi.org/10.1089/cmb.2021.0439).
 
 
 
