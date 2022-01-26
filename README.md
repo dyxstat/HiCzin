@@ -84,7 +84,7 @@ The results of the pipeline action are all in the 'out' directory.
 hiczin.log: the specific implementation information of HiCzin
 contig_info.csv: a csv file, containing four columns: contigs' names, the number of restriction sites on contigs, contigs' length 
 and coverage; or containing three columns: contigs' names, length and coverage
-valid_contact.csv: a csv file, containing three columns: index of the first contig, index of the second contig, and normalized Hi-C contacts that are regarded as spurious contacts and discarded
+valid_contact.csv: a csv file, containing three columns: index of the first contig, index of the second contig, and normalized Hi-C contacts that are regarded as valid contacts and retained by HiCzin
 HiCzin_normalized_contact.gz: Compressed format of the normalized contact by pickle. This file can serve as the input of HiCBin and HiFine.
 ```
 
