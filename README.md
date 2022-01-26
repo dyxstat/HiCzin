@@ -84,8 +84,8 @@ All outputs of HiCzin normalization pipeline are located in the OUT_directory yo
 * ***hiczin.log***: the specific implementation information of HiCzin pipeline
 * ***contig_info.csv***: information of contigs, containing four columns (contigs' name, the number of restriction sites on contigs, contigs' length 
 and coverage) or three columns (contigs' name, length and coverage)
+* ***Normalized_contact_matrix.npz***: a sparse matrix of normlized Hi-C contact maps in csr format and can be reloaded using ***scipy.sparse.load_npz('Normalized_contact_matrix.npz')***
 * ***valid_contact.csv***: information of valid intra-species contacts, containing three columns (index of the first contig, index of the second contig, and value of raw valid  intra-species contacts)
-* ***Normalized_contact_matrix.npz***: a sparse matrix of normlized Hi-C contact maps in csr format and can be reloaded using ***scipy.sparse.load_npz('Normalized_contact.npz')***
 * ***HiCzin_normalized_contact.gz***: Compressed format of the normalized contacts and contig information by pickle. This file can further serve as the input of HiCBin and HiFine.
 
 
