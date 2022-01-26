@@ -209,7 +209,7 @@ if __name__ == '__main__':
             logger.info('HiCzin consumes {} seconds in total'.format(str(end_time-start_time)))
 
             logger.info('Saving Normalized Hi-C contact maps')
-            scisp.save_npz(os.path.join(args.OUTDIR, 'Normalized_contact.npz'), hzmap.seq_map)
+            scisp.save_npz(os.path.join(args.OUTDIR, 'Normalized_contact.npz'), hzmap.seq_map.tocsr())
             save_object(os.path.join(args.OUTDIR, 'HiCzin_normalized_contact'), hzmap)
 
 
@@ -252,7 +252,7 @@ if __name__ == '__main__':
                             cm.seq_map,
                             norm_result,
                             0)
-            scisp.save_npz(os.path.join(args.OUTDIR, 'Normalized_contact.npz'), hzmap.seq_map)
+            scisp.save_npz(os.path.join(args.OUTDIR, 'Normalized_contact.npz'), hzmap.seq_map.tocsr())
             save_object(os.path.join(args.OUTDIR, 'HiCzin_normalized_contact'), hzmap)
             logger.info('Normalization section works!')
             logger.info('Testing finished!')
