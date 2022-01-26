@@ -85,10 +85,10 @@ python ./hiczin.py norm [Parameters] FASTA_file BAM_file TAX_file COV_file OUTPU
 ```
 #### Input File
 
-* ***FASTA_file***: a fasta file of the assembled contig (e.g. final.contigs.fa)
-* ***BAM_file***: a bam file of the Hi-C alignment (e.g. MAP_SORTED.bam)
-* ***TAX_file***: a csv file of contigs' taxonomy assignment by TAXAassign (e.g. contig_tax.csv)
-* ***COV_file***: a txt file of contigs' coverage information computed by script: ‘jgi summarize bam contig depths’ from MetaBAT2 (e.g. depth.txt)
+* **FASTA_file**: a fasta file of the assembled contig (e.g. final.contigs.fa)
+* **BAM_file**: a bam file of the Hi-C alignment (e.g. MAP_SORTED.bam)
+* **TAX_file**: a csv file of contigs' taxonomy assignment by TAXAassign (e.g. contig_tax.csv)
+* **COV_file**: a txt file of contigs' coverage information computed by script: ‘jgi summarize bam contig depths’ from MetaBAT2 (e.g. depth.txt)
 
 
 #### Example
@@ -104,12 +104,12 @@ python ./hiczin.py pipeline -v final.contigs.fa MAP_SORTED.bam contig_tax.csv de
 ### Output file
 All outputs of HiCzin normalization pipeline are located in the OUT_directory you specified when running the software. 
 
-* ***hiczin.log***: the specific implementation information of HiCzin pipeline
-* ***contig_info.csv***: information of contigs, containing four columns (contigs' name, the number of restriction sites on contigs, contigs' length 
+* **hiczin.log**: the specific implementation information of HiCzin pipeline
+* **contig_info.csv**: information of contigs, containing four columns (contigs' name, the number of restriction sites on contigs, contigs' length 
 and coverage) or three columns (contigs' name, length and coverage)
-* ***Normalized_contact_matrix.npz***: a sparse matrix of normlized Hi-C contact maps in csr format and can be reloaded using ***scipy.sparse.load_npz('Normalized_contact_matrix.npz')***
-* ***valid_contact.csv***: information of valid intra-species contacts, containing three columns (index of the first contig, index of the second contig, and value of raw valid  intra-species contacts)
-* ***HiCzin_normalized_contact.gz***: Compressed format of the normalized contacts and contig information by pickle. This file can further serve as the input of [***HiCBin***](https://github.com/dyxstat/HiCBin) and [***HiFine***](https://github.com/dyxstat/HiFine).
+* **Normalized_contact_matrix.npz**: a sparse matrix of normlized Hi-C contact maps in csr format and can be reloaded using **scipy.sparse.load_npz('Normalized_contact_matrix.npz')**
+* **valid_contact.csv**: information of valid intra-species contacts, containing three columns (index of the first contig, index of the second contig, and value of raw valid  intra-species contacts)
+* **HiCzin_normalized_contact.gz**: Compressed format of the normalized contacts and contig information by pickle. This file can further serve as the input of [**HiCBin**](https://github.com/dyxstat/HiCBin) and [**HiFine**](https://github.com/dyxstat/HiFine).
 
 
 ## Contacts and bug reports
