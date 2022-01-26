@@ -3,6 +3,7 @@ from raw_contact import ContactMatrix, ContactMatrix_LC
 from hiczin_contact import HiCzinMap, HiCzinMap_LC
 from exceptions import ApplicationException
 from utils import load_object, save_object, make_dir
+import scipy.sparse as scisp
 import logging
 import sys
 import argparse
@@ -208,6 +209,7 @@ if __name__ == '__main__':
             logger.info('HiCzin consumes {} seconds in total'.format(str(end_time-start_time)))
 
             logger.info('Saving Normalized Hi-C contact maps')
+            scipy.save_npz(os.path.join(args.OUTDIR, 'Normalized_contact.npz'), hzmap.seq_map)
             save_object(os.path.join(args.OUTDIR, 'HiCzin_normalized_contact'), hzmap)
 
 
@@ -250,6 +252,8 @@ if __name__ == '__main__':
                             cm.seq_map,
                             norm_result,
                             0)
+            scipy.save_npz(os.path.join(args.OUTDIR, 'Normalized_contact.npz'), hzmap.seq_map)
+            save_object(os.path.join(args.OUTDIR, 'HiCzin_normalized_contact'), hzmap)
             logger.info('Normalization section works!')
             logger.info('Testing finished!')
 
